@@ -1,0 +1,29 @@
+# config/companies.yaml
+# Target companies for autonomous job discovery
+# Add more companies here once core agent is tested end to end
+# No code change needed — discovery agent reads this file dynamically
+
+
+companies:
+
+  - name: American Express
+    aka: Amex
+    ats_type: eightfold                # Tells scraper which parser to use
+    careers_url: https://aexp.eightfold.ai/careers
+    api_url: https://aexp.eightfold.ai/api/apply/v2/jobs?domain=aexp.com&location=Chennai&limit=20
+    linkedin_url: https://www.linkedin.com/company/american-express/jobs
+    locations:
+      - Chennai
+      - Bangalore
+    target_titles:
+      - VP Technology
+      - Director Technology
+      - Head of Engineering
+      - Engineering Director
+    exclude_titles:
+      - Associate
+      - Analyst
+      - Junior
+      - Intern
+    priority: high
+    notes: "GCC centre in Chennai — Eightfold ATS, API scrapeable"
